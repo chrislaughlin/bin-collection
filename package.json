@@ -1,18 +1,21 @@
 {
   "name": "bin-collection",
   "version": "1.0.0",
-  "description": "Playful bin collection day viewer",
-  "main": "server.js",
+  "private": true,
+  "description": "Playful bin collection day viewer built with Next.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [
-    "bin",
-    "collection",
-    "belfast"
-  ],
-  "author": "",
-  "license": "MIT",
-  "type": "commonjs"
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.0"
+  }
 }
