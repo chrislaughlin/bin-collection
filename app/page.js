@@ -38,21 +38,6 @@ export default async function HomePage() {
             </div>
             <p className={messageClassName}>{message}</p>
           </div>
-
-          <footer className="card__footer">
-            <p className="card__footer-note">
-              {isSuccess ? (
-                <>
-                  Bin days change sometimes, so give the refresh a whirl whenever you fancy.
-                  <strong> Lids down, smiles up!</strong>
-                </>
-              ) : (
-                <>
-                  The council site is being shy right now. <strong>Try again in a moment.</strong>
-                </>
-              )}
-            </p>
-          </footer>
         </section>
       </main>
     </>
