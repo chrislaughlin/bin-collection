@@ -21,7 +21,6 @@ export default async function HomePage() {
       <main className="stage">
         <section className="card" aria-live="polite">
           <header className="card__header">
-            <span className="card__badge">Belfast BT7 2HR</span>
             <h1 className="card__title">Meet Your Next Bin Buddy!</h1>
             <p className="card__subtitle">
               We took a cheeky peek at Belfast City Council and found which bin is rolling out
