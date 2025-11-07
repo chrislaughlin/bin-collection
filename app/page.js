@@ -6,7 +6,7 @@ export default async function HomePage() {
   const binInfo = await getBinInformation();
   const isSuccess = binInfo.status === 'success';
   const message = isSuccess
-    ? `Next collection: ${binInfo.binType}!`
+    ? `${binInfo.binType}!`
     : binInfo.message;
   const messageClassName = `bin-message${isSuccess ? ' bin-message--pop' : ''}`;
 
@@ -40,11 +40,6 @@ export default async function HomePage() {
           </div>
 
           <footer className="card__footer">
-            <form className="refresh-form" action="/" method="get">
-              <button className="refresh-button" type="submit">
-                Spin the bin again
-              </button>
-            </form>
             <p className="card__footer-note">
               {isSuccess ? (
                 <>
