@@ -1,18 +1,34 @@
 # Bin Collection
 
-A playful Node.js web application that shows the next Belfast City Council bin collection for BT7 2HR.
+A playful Next.js application that shows the next Belfast City Council bin collection for BT7 2HR.
+
+The page is rendered with a server component that fetches the council data on each request, so the
+UI is always filled with the freshest bin gossip.
 
 ## Getting Started
 
-1. Install dependencies (none required beyond Node.js 18+ which provides the built-in `fetch`).
-2. Start the server:
+1. Install dependencies:
    ```bash
-   npm start
+   npm install
    ```
-3. Visit [http://localhost:3000](http://localhost:3000) and spin the bin to fetch the latest info.
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+3. Visit [http://localhost:3000](http://localhost:3000) to meet your next bin buddy.
+
+## Production Build
+
+To create an optimised build and run it locally:
+
+```bash
+npm run build
+npm run start
+```
 
 ## How it Works
 
-- The server makes a POST request to the Belfast City Council bin collection endpoint with the provided payload.
-- It parses the HTML response to find the “Type of bin” column and sends that to the frontend.
-- The frontend presents the data with a comic, upbeat interface—complete with confetti and bin banter.
+- The server component uses `fetch` to POST to the Belfast City Council bin collection endpoint.
+- The HTML response is parsed on the server to locate the “Type of bin” entry.
+- The rendered page presents the result with a cheerful UI and a simple refresh action that
+  re-renders the server component.
